@@ -3,7 +3,19 @@ Write a function initials(name) that accepts a full name as an arg. The function
 should return the initials for that name.
 */
 
-// Your code here 
+function initials(name){
+    let arr = name.split(" ");
+    let names = "";
+    let initials = "";
+
+    for(let i = 0; i < arr.length; i++){
+
+        names = arr[i];
+        initials += names[0].toUpperCase();
+    }
+
+    return initials;
+}
 
 
 // console.log(initials('anna paschall')); // 'AP'

@@ -4,7 +4,27 @@ function should return the shortest word in the sentence. If there is a tie,
 return the word that appears later in the sentence.
 */
 
-// Your code here 
+function shortestWord(sentence){
+    let arr = sentence.split(" ");
+    let word = "";
+    let shortestWord = "";
+    shortestWord = arr[0];
+
+    for(let i = 1; i < arr.length; i++){
+
+        word = arr[i];
+        
+        if(word.length <= shortestWord.length){
+
+                shortestWord = word;   
+        }
+        else{
+            shortestWord = shortestWord;
+        }
+    }
+    return shortestWord;
+
+}
 
 // console.log(shortestWord('what a wonderful life'));     // 'a'
 // console.log(shortestWord('the quick brown fox jumps')); // 'fox'
